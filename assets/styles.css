@@ -253,7 +253,7 @@ select {
     display: block;
     width: 100%;
     line-height: 1.5;
-    vertical-align: middle;
+
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
     background-position: right 26px center;
     background-repeat: no-repeat;
@@ -375,6 +375,7 @@ input::-webkit-inner-spin-button {
     animation: melt 3s infinite ease-in-out;
     background: linear-gradient(90deg, #ff6f61, #ffbd44, #ff6f61);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 
@@ -388,6 +389,7 @@ input::-webkit-inner-spin-button {
     height: 100%;
     background: linear-gradient(90deg, #ff6f61, #ffbd44, #ff6f61);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     z-index: -1;
     transform: scaleY(1);
@@ -497,6 +499,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 input[type="checkbox"] {

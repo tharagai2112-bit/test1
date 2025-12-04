@@ -672,3 +672,22 @@
     }
     */
 }
+/* ===== MOBILE NAVIGATION CUSTOMIZATION ===== */
+@media (max-width: 968px) {
+    /* Navbar layout - align hamburger to right */
+    .navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .hamburger {
+        order: 3 !important;
+        margin-left: auto !important;
+    }
+
+    /* Hide Get Started button in mobile view */
+    .cta-button {
+        display: none !important;
+    }
+}
