@@ -1,0 +1,90 @@
+/* Video Background Styles for Hero Banner */
+
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Video Background Container */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.video-background iframe,
+.video-background #player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+}
+
+/* Video Overlay - for better text readability */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 20, 0.6);
+
+    /* background: linear-gradient(135deg, rgba(20, 20, 60, 0.3) 0%, rgba(0, 0, 30, 0.4) 100%);
+    z-index: 1; */
+
+    /* Dark overlay
+    background: linear-gradient(135deg, rgba(20, 20, 60, 0.7) 0%, rgba(0, 0, 30, 0.8) 100%);
+    z-index: 1; */
+
+    background: rgba(0, 0, 0, 0.2);
+    /* Very light dark overlay */
+    z-index: 1;
+    opacity: 0.1;
+}
+
+/* Ensure content is above video */
+.hero-banner .container,
+.hero-banner .hero-content,
+.hero-banner .hero-background {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hide the old hero-right section if still present */
+.hero-right {
+    display: none;
+}
+
+/* Make hero-left full width */
+.hero-left {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Enhance text readability on video background */
+.hero-title,
+.hero-description,
+.hero-badge,
+.hero-stats {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .video-background iframe,
+    .video-background #player {
+        min-width: 200%;
+        min-height: 200%;
+    }
+}
